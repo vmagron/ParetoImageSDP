@@ -1,0 +1,50 @@
+Vars = {xa,ya,za,u0,v0,u1,v1}
+
+/* consider four balls with centers */
+
+A=(xa,ya,za) 
+B=(1,0,0)
+C=(0,1,0)
+D=(0,0,1)
+
+/* require that the distance AC is sqrt{2} and that AB and AD are at least sqrt{2}*/
+
+EqA = xa^2+(ya-1)^2+za^2-2	//  = 0
+IneqB = xa^2+(ya-1)^2+za^2-2	// >= 0
+IneqC = xa^2+(ya-1)^2+za^2-2	// >= 0
+
+/* require that the line through the points (u0,v0,0) and (u1,v1,1) stabs the balls with centers A,B,C,D and radii sqrt{2}} */
+
+IneqSA = 
+IneqSB = 
+IneqSC = 
+IneqSD = 
+
+/* ordering condition */
+
+IneqAB = (u1-u0)*(1-xa) - (v1-v0)*ya -za
+IneqBC = -(u1-u0) + (v1-v0)
+IneqCD = -(v1-v0) + 1
+IneqAC = -(u1-u0)*xa + (v1-v0)*(1-ya)-za
+IneqDB = (u1-u0) - za
+
+/* The sets */
+
+X = {EqA, IneqB, IneqC, IneqSA, IneqSB, IneqSC, IneqSD}
+Yp = {IneqAB, IneqBC, IneqCD}
+Ym = {-IneqAB, -IneqBC, -IneqCD}
+Zp = {IneqAC, IneqCD, IneqDB}
+Zm = {-IneqAC, -IneqCD, -IneqDB}
+
+*/ The projections */
+
+S1 = projection of X \cap Yp on {xa,ya,za}
+S2 = projection of X \cap Ym on {xa,ya,za}
+T1 = projection of X \cap Zp on {xa,ya,za}
+T2 = projection of X \cap Zm on {xa,ya,za}
+
+/* The questions */
+
+Is (S1 \cup S2) disjoint from (T1 \cap T2) ?
+
+
