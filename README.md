@@ -10,11 +10,14 @@ Victor Magron, Didier Henrion and Jean-Bernard Lasserre “Approximating Pareto 
 
 2) Images of semialgebraic sets under polynomial applications (see imagesdp/) implementing the two methods described in 
 Victor Magron, Didier Henrion and Jean-Bernard Lasserre “Semidefinite approximations of projections and polynomial images of semialgebraic sets”
-(on the [arxiv](http://www.optimization-online.org/DB_HTML/2014/10/4606.html))
+(on the [Optimization Online](http://www.optimization-online.org/DB_HTML/2014/10/4606.html))
 
 See 
+
 1) `paretosdp/examples/ex11_4.m`
+
 2) `imagesdp/exists/ex11_4_exists.m`
+
 for some example-based documentation.
 
 Warning
