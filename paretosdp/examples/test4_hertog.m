@@ -1,6 +1,6 @@
 clear all; 
-saveb = 1;
-N = 100;
+saveb = 0;
+N = 10;
 s = 1; d = 1; n = 2;
 mpol('xlarge', n);
 mpol('x', n);

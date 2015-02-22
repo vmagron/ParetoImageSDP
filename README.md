@@ -12,13 +12,28 @@ Victor Magron, Didier Henrion and Jean-Bernard Lasserre “Approximating Pareto 
 Victor Magron, Didier Henrion and Jean-Bernard Lasserre “Semidefinite approximations of projections and polynomial images of semialgebraic sets”
 (on [Optimization Online](http://www.optimization-online.org/DB_HTML/2014/10/4606.html))
 
+
+Requirements
+------------
+
+Matlab
+
+Yalmip [Download](http://users.isy.liu.se/johanl/yalmip/pmwiki.php?n=Main.Download)
+
+Mosek  [Download](https://mosek.com/resources/downloads)
+
+
+Documentation
+-------------
+
 See 
 
-1) `paretosdp/examples/ex11_4.m`
+1) `paretosdp/examples/ex11_4.m` and `paretosdp/examples/test4.m`
 
 2) `imagesdp/exists/ex11_4_exists.m`
 
 for some example-based documentation.
+
 
 Warning
 -------
@@ -26,6 +41,7 @@ Warning
 *This is a preliminary implementation and the probability of finding bugs is high.*
 
 Do not hesitate to submit bug report of pull requests.
+
 
 License
 -------
