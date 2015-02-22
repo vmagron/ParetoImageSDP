@@ -18,9 +18,11 @@ Requirements
 
 Matlab
 
-Yalmip [Download](http://users.isy.liu.se/johanl/yalmip/pmwiki.php?n=Main.Download)
+Gloptipoly [Download](http://homepages.laas.fr/henrion/software/gloptipoly3)
 
-Mosek  [Download](https://mosek.com/resources/downloads)
+Yalmip     [Download](http://users.isy.liu.se/johanl/yalmip/pmwiki.php?n=Main.Download)
+
+Mosek      [Download](https://mosek.com/resources/downloads)
 
 
 Documentation
