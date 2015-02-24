@@ -20,6 +20,7 @@ g2 = - x(1) - 2 * x(2) + 3 >= 0;
 g3 = 2 >= x(1)^2 + x(2)^2;
 Khat = [g1, g2, g3];
 %% Compute lower/upper bounds of f1 and f2 over Khat
+cd ../scripts;
 [m1, M1] = minmax (x, n, f1, Khat, 1); [m2, M2] = minmax (x, n, f2, Khat, 1);
 
 
@@ -28,9 +29,8 @@ dmin = 4; dmax = 4;
 
 %% For each degree between dmin and dmax, the script generates a figure (within the directory figs/exname/) displaying Pareto curve approximations
 exname = 'ex11_4';
-cd ../scripts;
 
 
 methoda (x, xfree, lambda, f1, f2, f1free, f2free, n, N, Khat, dmin, dmax, exname, m1, M1, m2, M2);
-methodb (x, xfree, lambda, f1, f2, f1free, f2free, n, N, Khat, dmin, dmax, exname, m1, M1, m2, M2);
-methodc (x, xfree, lambda, f1, f2, f1free, f2free, n, N, Khat, dmin, dmax, exname, m1, M1, m2, M2);
+%methodb (x, xfree, lambda, f1, f2, f1free, f2free, n, N, Khat, dmin, dmax, exname, m1, M1, m2, M2);
+%methodc (x, xfree, lambda, f1, f2, f1free, f2free, n, N, Khat, dmin, dmax, exname, m1, M1, m2, M2);

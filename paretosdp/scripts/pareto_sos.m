@@ -68,8 +68,10 @@ p2 = zeros (inverse_method, degree + 2 * inverse_method + 1);
 for order_L2 = 1:inverse_method
   inverse_degree = 2 * order_L2;
   porder = degree + inverse_degree;
-  p1(order_L2, 1:(porder + 1)) = double(inverse_L2(H, m1, inverse_degree, lo1, up1, porder));
-  p2(order_L2, 1:(porder + 1)) = double(inverse_L2(H, m2, inverse_degree, lo2, up2, porder));
+  inverse1 = inverse_L2(H, m1, inverse_degree, lo1, up1, porder);
+  inverse2 = inverse_L2(H, m2, inverse_degree, lo2, up2, porder);
+  p1(order_L2, 1:(porder + 1)) = double(inverse1);
+  p2(order_L2, 1:(porder + 1)) = double(inverse2);
 end
 H\m1 
 p1

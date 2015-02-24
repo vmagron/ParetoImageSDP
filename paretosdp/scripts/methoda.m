@@ -7,7 +7,7 @@ output = 0;
 
 %%%% im stands for inverse method.
 %%%% Using this method allows to reconstructs the coordinates of the Pareto curve from the moments of the solution x obtained with SDP
-im = 3;
+im = 6;
 Khatlambda = [Khat, lambda >= 0, 1 >= lambda];
 
 
@@ -21,8 +21,22 @@ for deg = dmin:dmax
   interp = 'Latex'; axesfont = 35; textfont=35; marksize = 10; markLine = 7; 
   [status,message,messageid] = mkdir('../figs', exname);
   namevar = strcat('../figs/', exname, '/methoda_degree', num2str(deg), '.eps');
-  hpareto=figure('visible','off'); set(0,'DefaultAxesFontName', 'Palatino');set(0,'DefaultAxesFontSize', axesfont); set(0,'DefaultTextFontname', 'Palatino');set(0,'DefaultTextFontSize', axesfont); plot(p1_d4(:, im), p2_d4(:, im), 'linewidth', markLine); hold on; plot(f1opt(goodlambda), f2opt(goodlambda), 'o','markersize', marksize,  'color',[0 0.5 0]); leg_pareto = legend('$(h_{1}, h_{2})$', '$(f_1^*, f_2^*)$'); 
-  set(leg_pareto,'Interpreter',interp); set(gca,'XTick',(-1:0.4:1)); set(gca,'YTick',(-1:1:3));  set(leg_pareto,'FontSize',textfont); axis([m1 M1 m2 M2]); print('-depsc', namevar); hold off;
+
+
+  hpareto=figure('visible','off'); 
+  set(0,'DefaultAxesFontName', 'Palatino'); set(0,'DefaultAxesFontSize', axesfont); 
+  set(0,'DefaultTextFontname', 'Palatino'); set(0,'DefaultTextFontSize', axesfont);
+  cmap = colormap(gray);
+%  plot(p1_d4(:, im), p2_d4(:, im), 'linewidth', markLine); hold on; plot(f1opt(goodlambda), f2opt(goodlambda), 'o','markersize', marksize,  'color',[0 0.5 0]); 
+  plot(p1_d4(:, im), p2_d4(:, im), 'linewidth', markLine); hold on; 
+  plot(f1opt(goodlambda), f2opt(goodlambda), 'o','markersize', marksize); 
+
+  leg_pareto = legend('$(h_{1}, h_{2})$', '$(f_1^*, f_2^*)$'); 
+  set(leg_pareto,'Interpreter',interp); 
+  set(gca,'XTick',(-1:0.4:1)); set(gca,'YTick',(-1:1:3));  
+  set(leg_pareto,'FontSize',textfont); 
+  axis([m1 M1 m2 M2]); 
+  print('-dpsc', namevar); hold off;
   %print -depsc '../figs/ex11_4/ex11_4_pareto4.eps'; hold off;
 end
 
